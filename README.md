@@ -1,6 +1,6 @@
 # docker_sparta_dsmc
 dockerfile to learn [sparta DSMC code](https://github.com/sparta/sparta)
-* source tree is under `home/user/sparta-master
+* source tree is under `/home/user/sparta-master`
 ```
     host$ docker run -it -d -v `pwd`:/home/sparta --rm --name cnt1 natsumizu/sparta_dsmc:0.1 /bin/bash
     host$ docker attach cnt1
