@@ -1,8 +1,6 @@
 FROM gcc:8.2
-RUN apt update -y && apt-get install -y wget
-RUN apt install -y openmpi-doc openmpi-bin libopenmpi-dev
-RUN apt install -y x11-apps
-RUN apt install -y vim
+RUN apt update -y && apt-get install -y curl \
+  openmpi-doc openmpi-bin libopenmpi-dev 
 RUN sh -c "mkdir -p /usr/opt && cd /usr/opt \
   && curl -s -L https://github.com/Kitware/CMake/releases/download/v3.19.2/cmake-3.19.2-Linux-x86_64.sh -o cmake.sh \
   && sh cmake.sh --skip-license --prefix=/usr/local"
